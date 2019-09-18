@@ -17,7 +17,7 @@ public class Triangulo {
 
     public Tipo getTipoAngulo(Triangulo t){
         if (isTriangulo(t.getLadoa(), t.getLadob(), t.getLadoc())==false) return null;
-
+         -Math.cos(alfa) = (t.getLadoa()*t.getLadoa() - t.getLadob()*t.getLadob() - t.getLadoc()*t.getLadoc())/2*t.getLadob()*t.getLadoc();
     }
 
     public Tipo getTipoLado(Triangulo t){
