@@ -15,11 +15,23 @@ public class Triangulo {
 
     public int getLadoc() {        return ladoc;    }
 
-    public Tipo getTipoAngulo(Triangulo t){
-        if (isTriangulo(t.getLadoa(), t.getLadob(), t.getLadoc())==false) return null;
-         double x = -(t.getLadoa()*t.getLadoa() - t.getLadob()*t.getLadob() - t.getLadoc()*t.getLadoc())/2*t.getLadob()*t.getLadoc();
-        Math.cos(alfa) = x;
-    }
+    public double getTipoAngulo(){
+        if (isTriangulo(getLadoa(), getLadob(), getLadoc())==false) return 0;
+        double a2 = getLadoa()*getLadoa();
+        double b2 = getLadob()*getLadob();
+        double c2 = getLadoc()*getLadoc();
+        double angulo1 = Math.toDegrees(Math.acos((a2 + b2 - c2)*1.0/(2.0*getLadob()*getLadoa())));
+        double angulo2 = Math.toDegrees(Math.acos((a2 + c2 - b2)*1.0/(2.0*getLadoc()*getLadoa())));
+        double angulo3 = Math.toDegrees(Math.acos((c2 + b2 - a2)*1.0/(2.0*getLadob()*getLadoc())));
+
+        alpha = (float) (alpha * 180 / PI);
+        betta = (float) (betta * 180 / PI);
+        gamma = (float) (gamma * 180 / PI);
+
+        System.out.println(angulo1 + " " + angulo2 + " " + angulo3 );
+
+        return angulo1;
+            }
 
     public Tipo getTipoLado(Triangulo t){
 
