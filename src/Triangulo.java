@@ -24,11 +24,9 @@ public class Triangulo {
         double angulo2 = Math.toDegrees(Math.acos((a2 + c2 - b2)*1.0/(2.0*getLadoc()*getLadoa())));
         double angulo3 = Math.toDegrees(Math.acos((c2 + b2 - a2)*1.0/(2.0*getLadob()*getLadoc())));
 
-        alpha = (float) (alpha * 180 / PI);
-        betta = (float) (betta * 180 / PI);
-        gamma = (float) (gamma * 180 / PI);
 
         System.out.println(angulo1 + " " + angulo2 + " " + angulo3 );
+
 
         return angulo1;
             }

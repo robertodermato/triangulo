@@ -9,7 +9,7 @@ public class AppTriangulo {
         Triangulo t5 = new Triangulo(5, 3, 4);
         Triangulo t6 = new Triangulo(5, 4, 3);
 
-        double x = t6.getTipoAngulo();
+        double x = t5.getTipoAngulo();
 
         System.out.println(x);
 
